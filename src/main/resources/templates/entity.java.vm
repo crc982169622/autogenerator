@@ -1,0 +1,58 @@
+import com.baomidou.mybatisplus.annotation.KeySequence;
+import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.Builder;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import lombok.Setter;
+import java.sql.Timestamp;
+import com.tianque.grid.gridcenter.domain.BaseDomain;
+import java.sql.Timestamp;
+
+import java.io.Serializable;
+
+@Data
+@NoArgsConstructor
+@KeySequence(value = "s_${table.entityPath}")
+@TableName("${table.name}")
+@ApiModel("${table.comment}")
+/**
+ * @author ${author}
+ * @since ${date}
+ */
+public class ${table.entityName} extends BaseDomain implements Serializable {
+
+#foreach(${column} in ${table.fields})
+    #if($column.propertyName=="id"||$column.propertyName=="createDate"||$column.propertyName=="updateDate"||$column.propertyName=="createUser"||$column.propertyName=="updateUser"||$column.propertyName=="isDelete")
+
+    #elseif($column.propertyType == "Long" || $column.propertyType == "Integer")
+    @ApiModelProperty(value = "${column.comment}",example = "1")
+    private $column.propertyType ${column.propertyName};
+    #else
+    @ApiModelProperty("${column.comment}")
+    private $column.propertyType ${column.propertyName};
+    #end
+#end
+
+@Builder
+public ${table.entityName} (
+    #foreach(${column} in ${table.fields})
+        #if($column.propertyName!="id"&&$column.propertyName!="createDate"&&$column.propertyName!="updateDate"&&$column.propertyName!="createUser"&&$column.propertyName!="updateUser"&&$column.propertyName!="isDelete")
+            $column.propertyType ${column.propertyName},
+        #end
+    #end
+        Long id,Timestamp createDate,String createUser, Timestamp updateDate,String updateUser,Integer ifDelete
+
+        ) {
+        super(id,createDate,createUser,updateDate,updateUser,ifDelete);
+    #foreach(${column} in ${table.fields})
+        #if($column.propertyName!="id"&&$column.propertyName!="createDate"&&$column.propertyName!="updateDate"&&$column.propertyName!="createUser"&&$column.propertyName!="updateUser"&&$column.propertyName!="isDelete")
+                this.${column.propertyName} = ${column.propertyName};
+        #end
+    #end
+
+
+        }
+
+}

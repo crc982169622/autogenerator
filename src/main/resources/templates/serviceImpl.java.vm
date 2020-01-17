@@ -1,0 +1,14 @@
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+/**
+ * @author ${author}
+ * @since ${date}
+ */
+@Service("${table.entityPath}DomainService")
+public class ${table.entityName}DomainServiceImpl extends ServiceImpl<${table.entityName}Mapper, ${table.entityName}> implements ${table.entityName}DomainService {
+
+    @Autowired
+    private ${table.entityName}Mapper ${table.entityPath}Mapper;
+
+}
