@@ -32,10 +32,10 @@ public class Test {
 参数	                名称	                    是否必填
 modelName	            模块名称	
 dbType	                数据库类型（默认mysql）	
-dataSourceDriverName	数据库驱动	                   是
-dataSourceUrl	        驱动连接的URL	               是
-dataSourceUserName	    数据库连接用户名	           是
-dataSourcePassword	    数据库连接密码	              是
+dataSourceDriverName	数据库驱动	                  是
+dataSourceUrl	        驱动连接的URL	              是
+dataSourceUserName	    数据库连接用户名	            是
+dataSourcePassword	    数据库连接密码	                是
 author	                创建作者	
 templateEntity	        输出模板（实体类）	
 templateMapper	        输出模板（dao层）	
