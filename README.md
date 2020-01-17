@@ -1,29 +1,21 @@
 本系统主要功能是代码生成器，基于mybatis-plus代码生成器，对其进行封装，以符合实际项目需求。
 通过以下案例，可以基本了解如何使用该代码生成器：
 ```
-package com.tianque.grid.gridcenter;
-
-import com.baomidou.mybatisplus.annotation.DbType;
-import com.tianque.grid.AutoGeneratorConfig;
-import com.tianque.grid.CodeGenerator;
-
-public class Test {
-    public static void main(String[] args) {
-        AutoGeneratorConfig config = new AutoGeneratorConfig();
-        config.setModelName("modelname");
-        config.setDbType(DbType.ORACLE);
-        config.setDataSourceDriverName("oracle.jdbc.driver.OracleDriver");
-        config.setDataSourceUrl("jdbc:oracle:thin:@192.168.100.250:1521:xxx");
-        config.setDataSourceUserName("xxx");
-        config.setDataSourcePassword("xxx");
-        config.setPackageParent("com.crc.autogenerator.domain.model");
-        config.setAuthor("chenrencun");
-        config.setTemplateEntity("templates/entity.java");
-        config.setTemplateMapper("templates/dao.java");
-        config.setTemplateService("templates/service.java");
-        config.setTemplateServiceImpl("templates/serviceImpl.java");
-        CodeGenerator.run(config);
-    }
+public static void main(String[] args) {
+    AutoGeneratorConfig config = new AutoGeneratorConfig();
+    config.setModelName("modelname");
+    config.setDbType(DbType.ORACLE);
+    config.setDataSourceDriverName("oracle.jdbc.driver.OracleDriver");
+    config.setDataSourceUrl("jdbc:oracle:thin:@192.168.100.250:1521:xxx");
+    config.setDataSourceUserName("xxx");
+    config.setDataSourcePassword("xxx");
+    config.setPackageParent("com.crc.autogenerator.domain.model");
+    config.setAuthor("chenrencun");
+    config.setTemplateEntity("templates/entity.java");
+    config.setTemplateMapper("templates/dao.java");
+    config.setTemplateService("templates/service.java");
+    config.setTemplateServiceImpl("templates/serviceImpl.java");
+    CodeGenerator.run(config);
 }
 ```
 对使用案例的说明：
