@@ -29,6 +29,7 @@ public class Test {
 对使用案例的说明：
     首先实例化一个AutoGeneratorConfig配置类，并设置属性，然后调用CodeGenerator的run方法，AutoGeneratorConfig配置类作为参数传入。
 对AutoGeneratorConfig配置类的属性说明：
+
 参数	  |             名称	  |                  是否必填
 modelName	            模块名称	
 dbType	                数据库类型（默认mysql）	
