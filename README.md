@@ -30,20 +30,20 @@ public class Test {
     首先实例化一个AutoGeneratorConfig配置类，并设置属性，然后调用CodeGenerator的run方法，AutoGeneratorConfig配置类作为参数传入。
 对AutoGeneratorConfig配置类的属性说明：
 
-参数	  |             名称	  |                  是否必填
+参数	|  名称  |   是否必填
  ---- | ----- | ------
 modelName	  |          模块名称	
-dbType	                数据库类型（默认mysql）	
-dataSourceDriverName	数据库驱动	                  是
-dataSourceUrl	        驱动连接的URL	              是
-dataSourceUserName	    数据库连接用户名	            是
-dataSourcePassword	    数据库连接密码	                是
-author	                创建作者	
-templateEntity	        输出模板（实体类）	
-templateMapper	        输出模板（dao层）	
-templateService	        输出模板（service层）	
-templateServiceImpl	    输出模板（serviceImpl类）	
-templateController	    输出模板（controller类）	
+dbType	      |          数据库类型（默认mysql）	
+dataSourceDriverName |	数据库驱动	         |         是
+dataSourceUrl	     |   驱动连接的URL	      |        是
+dataSourceUserName	 |   数据库连接用户名	    |        是
+dataSourcePassword	 |   数据库连接密码	     |           是
+author	              |  创建作者	
+templateEntity	      |  输出模板（实体类）	
+templateMapper	      |  输出模板（dao层）	
+templateService	      |  输出模板（service层）	
+templateServiceImpl	  |  输出模板（serviceImpl类）	
+templateController	   | 输出模板（controller类）	
 
 注意：
 1.	实现该功能的前提是，需要在数据库中有对应的数据表。
