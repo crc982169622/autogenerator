@@ -1,4 +1,5 @@
 本系统主要功能是代码生成器，基于mybatis-plus代码生成器，对其进行封装，以符合实际项目需求。
+
 通过以下案例，可以基本了解如何使用该代码生成器：
 ```
 public static void main(String[] args) {
@@ -19,6 +20,7 @@ public static void main(String[] args) {
 }
 ```
 对使用案例的说明：
+
     首先实例化一个AutoGeneratorConfig配置类，并设置属性，然后调用CodeGenerator的run方法，AutoGeneratorConfig配置类作为参数传入。
 对AutoGeneratorConfig配置类的属性说明：
 
