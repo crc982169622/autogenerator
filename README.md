@@ -31,7 +31,8 @@ public class Test {
 对AutoGeneratorConfig配置类的属性说明：
 
 参数	  |             名称	  |                  是否必填
-modelName	            模块名称	
+ ---- | ----- | ------
+modelName	  |          模块名称	
 dbType	                数据库类型（默认mysql）	
 dataSourceDriverName	数据库驱动	                  是
 dataSourceUrl	        驱动连接的URL	              是
